@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  color-scheme: light;
+  --ink: #20233a;
+  --muted: #73778d;
+  --purple: #6754d9;
+  --paper: #fbfaff;
+  --line: #eeeef4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header,
+.site-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 24px 40px;
+}
+
+.brand {
+  font-family: "Manrope", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand span,
+.hero h1 span,
+.intro h2 span,
+.closing h2 span {
+  color: var(--purple);
+}
+
+.site-header nav {
+  align-items: center;
+  display: flex;
+  gap: 34px;
+}
+
+.site-header nav a:not(.button) {
+  color: #55596e;
+  font-size: 14px;
+}
+
+.button {
+  align-items: center;
+  border-radius: 8px;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 15px;
+  justify-content: center;
+  padding: 13px 19px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.button:hover {
+  box-shadow: 0 8px 20px #20233a20;
+  transform: translateY(-2px);
+}
+
+.button-outline {
+  border: 1px solid #dedbea;
+  padding: 10px 17px;
+}
+
+.button-primary {
+  background: var(--purple);
+  color: white;
+  margin-top: 12px;
+}
+
+.hero {
+  align-items: center;
+  background: var(--paper);
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  min-height: 540px;
+  overflow: hidden;
+  padding: 65px max(8%, calc((100% - 1120px) / 2));
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.eyebrow {
+  color: var(--purple);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  margin: 0 0 17px;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.intro h2,
+.closing h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(38px, 5vw, 58px);
+  letter-spacing: -2.7px;
+  line-height: 1.12;
+  margin: 0;
+}
+
+.hero-copy {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 22px 0 12px;
+  max-width: 430px;
+}
+
+.hero-note {
+  color: #9295a6;
+  font-size: 12px;
+  margin-top: 18px;
+}
+
+.hero-art {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 350px;
+  position: relative;
+}
+
+.orbit {
+  border: 1px solid #e8e4fb;
+  border-radius: 50%;
+  height: 370px;
+  position: absolute;
+  transform: rotate(-28deg);
+  width: 370px;
+}
+
+.orbit-two {
+  height: 300px;
+  transform: rotate(38deg);
+  width: 430px;
+}
+
+.path-card {
+  background: #fff;
+  border: 1px solid #f0eef7;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px #51468b18;
+  padding: 25px 24px 20px;
+  position: relative;
+  width: min(100%, 360px);
+}
+
+.card-label,
+.progress-label {
+  color: #a0a1ae;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+.path-step {
+  align-items: center;
+  border-bottom: 1px solid #f1f0f5;
+  display: flex;
+  font-size: 12px;
+  gap: 12px;
+  padding: 17px 0;
+}
+
+.step-number {
+  color: #a2a3b2;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.step-check {
+  color: #69b49c;
+  margin-left: auto;
+}
+
+.path-step-active {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.step-arrow {
+  margin-left: auto;
+}
+
+.card-progress {
+  background: #f0eef9;
+  border-radius: 5px;
+  height: 5px;
+  margin: 18px 0 10px;
+}
+
+.card-progress span {
+  background: var(--purple);
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+  width: 68%;
+}
+
+.sparkle {
+  color: #f0a36f;
+  font-size: 29px;
+  position: absolute;
+}
+
+.sparkle-one {
+  right: 7%;
+  top: 16%;
+}
+
+.sparkle-two {
+  bottom: 13%;
+  color: #8c79e9;
+  left: 3%;
+}
+
+.intro {
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 90px 24px 30px;
+  text-align: center;
+}
+
+.intro h2,
+.closing h2 {
+  font-size: clamp(31px, 4vw, 43px);
+  letter-spacing: -1.7px;
+}
+
+.intro > p:last-child,
+.closing > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 17px auto 0;
+  max-width: 500px;
+}
+
+.features {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 30px auto 95px;
+  max-width: 1100px;
+  padding: 0 30px;
+}
+
+.feature-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 26px 24px 28px;
+}
+
+.feature-icon {
+  align-items: center;
+  border-radius: 9px;
+  display: inline-flex;
+  font-size: 19px;
+  height: 39px;
+  justify-content: center;
+  width: 39px;
+}
+
+.icon-purple {
+  background: #f0edff;
+  color: #705fe0;
+}
+
+.icon-orange {
+  background: #fff2e8;
+  color: #df8c4c;
+}
+
+.icon-green {
+  background: #e9f7f1;
+  color: #51a783;
+}
+
+.feature-card h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  margin: 20px 0 8px;
+}
+
+.feature-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.closing {
+  background: #f7f5ff;
+  padding: 75px 24px;
+  text-align: center;
+}
+
+.closing .button {
+  margin-top: 22px;
+}
+
+.button-light {
+  background: #fff;
+  color: var(--purple);
+}
+
+.site-footer {
+  color: #898b9a;
+  font-size: 12px;
+  gap: 20px;
+}
+
+.site-footer .brand {
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .site-header,
+  .site-footer {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .site-header nav {
+    gap: 15px;
+  }
+
+  .site-header nav a:not(.button) {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 60px 28px 45px;
+  }
+
+  .hero-art {
+    min-height: 320px;
+  }
+
+  .orbit {
+    height: 310px;
+    width: 310px;
+  }
+
+  .orbit-two {
+    height: 260px;
+    width: 360px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    margin-bottom: 65px;
+    max-width: 520px;
+  }
+
+  .site-footer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-art {
+    min-height: 290px;
+  }
+
+  .path-card {
+    padding: 21px 17px 17px;
+  }
+
+  .site-footer p {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
